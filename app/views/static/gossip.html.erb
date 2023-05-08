@@ -1,0 +1,8 @@
+<h1>Bienvenu sur la page Gossip n<%=@current_gossip.id %></h1>
+
+<p>Auteur du Potin : <%=@current_gossip.user.first_name %> </p>
+<p>Titre du Potin : <%=@current_gossip.title %></p>
+<p>Date de creation du Potin : <%=@current_gossip.created_at %></p>
+<p>Potin : <%=@current_gossip.content %></p>
+
+<p>Lien vers la page de l'auteur : <%= link_to "Cliquer ici.", user_pre_path(@current_gossip.user.id), :class => "nav-link"%></p>

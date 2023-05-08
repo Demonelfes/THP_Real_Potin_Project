@@ -1,0 +1,10 @@
+<h1>Bienvenue sur notre magnifique site de potins !</h1>
+
+<h1>Voici la liste de tous les potins : </h1><br/>
+    <%@all_gossips.each do |elem|%>
+    <%=elem.user.first_name %> : <%= elem.title%>  <%= link_to "Cliquez ici pour lire le potin.", gossip_pre_path(elem.id), :class => "nav-link"%> <br/>
+    <%end%>
+
+
+<h1>Static#home</h1>
+<p>Find me in app/views/static/index.html.erb</p>
